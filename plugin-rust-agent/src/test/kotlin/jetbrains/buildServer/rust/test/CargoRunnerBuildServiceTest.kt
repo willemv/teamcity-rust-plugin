@@ -71,6 +71,15 @@ class CargoRunnerBuildServiceTest {
         Assert.assertEquals(result, arguments)
     }
 
+    @Test(dataProvider = "testFmtArgumentsData")
+    fun testFmtArguments(parameters: Map<String, String>, arguments: List<String>) {
+        val context = getRunnerContext(parameters)
+        val argumentsProvider = FmtArgumentsProvider()
+        val result = argumentsProvider.getArguments(context)
+
+        Assert.assertEquals(result, arguments)
+    }
+
     @Test(dataProvider = "testPackageArgumentsData")
     fun testPackageArguments(parameters: Map<String, String>, arguments: List<String>) {
         val context = getRunnerContext(parameters)
@@ -268,6 +277,15 @@ class CargoRunnerBuildServiceTest {
                 arrayOf(CollectionsUtil.asMap(
                         CargoConstants.PARAM_DOC_TARGET, "name",
                         CargoConstants.PARAM_DOC_MANIFEST, "/path/to/manifest"), listOf("doc", "--target", "name", "--manifest-path", "/path/to/manifest")))
+    }
+
+    @DataProvider(name = "testFmtArgumentsData")
+    fun testFmtArgumentsData(): Array<Array<Any>> {
+        return arrayOf(arrayOf(CollectionsUtil.asMap(
+                CargoConstants.PARAM_FMT_CHECK, "true"), listOf("fmt", "--check")),
+
+                arrayOf(CollectionsUtil.asMap(
+                        CargoConstants.PARAM_FMT_MANIFEST, "/path/to/manifest"), listOf("fmt", "--manifest-path", "/path/to/manifest")))
     }
 
     @DataProvider(name = "testPackageArgumentsData")

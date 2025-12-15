@@ -16,6 +16,7 @@ class CargoParametersProvider {
             CleanCommandType(),
             ClippyCommandType(),
             DocCommandType(),
+            FmtCommandType(),
             LoginCommandType(),
             PackageCommandType(),
             PublishCommandType(),
@@ -231,6 +232,12 @@ class CargoParametersProvider {
 
     val docParallelKey: String
         get() = CargoConstants.PARAM_DOC_PARALLEL
+
+    val fmtCheckKey: String
+        get() = CargoConstants.PARAM_FMT_CHECK
+
+    val fmtManifestKey: String
+        get() = CargoConstants.PARAM_FMT_MANIFEST
 
     val packageNoVerifyKey: String
         get() = CargoConstants.PARAM_PACKAGE_NO_VERIFY

@@ -99,6 +99,10 @@ class CargoCommandBuildSession(
             commands.add(createCommand(RustupComponentAddBuildService("clippy")))
         }
 
+        if (command == CargoConstants.COMMAND_FMT) {
+            commands.add(createCommand(RustupComponentAddBuildService("rustfmt")))
+        }
+
         if (command == CargoConstants.COMMAND_CUSTOM_CRATE) {
             val command = parameters[CargoConstants.PARAM_CUSTOM_CRATE_COMMAND_NAME]
             val version = parameters[CargoConstants.PARAM_CUSTOM_CRATE_COMMAND_VERSION]

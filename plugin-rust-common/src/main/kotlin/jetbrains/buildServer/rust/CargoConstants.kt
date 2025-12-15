@@ -27,6 +27,7 @@ object CargoConstants {
     const val COMMAND_CLEAN = "clean"
     const val COMMAND_CLIPPY = "clippy"
     const val COMMAND_DOC = "doc"
+    const val COMMAND_FMT = "fmt"
     const val COMMAND_LOGIN = "login"
     const val COMMAND_PACKAGE = "package"
     const val COMMAND_PUBLISH = "publish"
@@ -114,6 +115,9 @@ object CargoConstants {
     const val PARAM_DOC_TARGET = "cargo-doc-target"
     const val PARAM_DOC_MANIFEST = "cargo-doc-manifest"
     const val PARAM_DOC_PARALLEL = "cargo-doc-parallel"
+
+    const val PARAM_FMT_CHECK = "cargo-fmt-check"
+    const val PARAM_FMT_MANIFEST = "cargo-fmt-manifest"
 
     const val PARAM_PACKAGE_NO_VERIFY = "cargo-package-no-verify"
     const val PARAM_PACKAGE_NO_METADATA = "cargo-package-no-metadata"

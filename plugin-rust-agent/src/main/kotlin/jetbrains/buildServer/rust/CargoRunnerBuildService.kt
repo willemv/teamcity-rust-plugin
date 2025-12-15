@@ -32,6 +32,7 @@ class CargoRunnerBuildService(
             CargoConstants.COMMAND_CHECK to CheckArgumentsProvider(),
             CargoConstants.COMMAND_CLEAN to CleanArgumentsProvider(),
             CargoConstants.COMMAND_CLIPPY to ClippyArgumentsProvider(),
+            CargoConstants.COMMAND_FMT to FmtArgumentsProvider(),
             CargoConstants.COMMAND_DOC to DocArgumentsProvider(),
             CargoConstants.COMMAND_LOGIN to LoginArgumentsProvider(),
             CargoConstants.COMMAND_PACKAGE to PackageArgumentsProvider(),
