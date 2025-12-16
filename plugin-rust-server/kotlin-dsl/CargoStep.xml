@@ -269,6 +269,21 @@
                 </param>
             </option>
 
+            <option name="fmt" value="fmt">
+                <param name="cargo-fmt-check" dslName="check">
+                    <description>
+                        Whether to run with --check
+                    </description>
+                </param>
+
+
+                <param name="cargo-fmt-manifest" dslName="manifest">
+                    <description>
+                        Path to the manifest to run cargo with
+                    </description>
+                </param>
+            </option>
+
             <option name="login" value="login">
                 <param name="cargo-login-token" dslName="token">
                     <deprecated replaceWith="tokenSecure"/>
